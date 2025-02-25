@@ -4,9 +4,14 @@
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welocome');
-// });
+Route::get('welcome', function () {
+    return view('welcome');
+});
+
+Route::get('/', function () {
+    // return view('welcome');
+    return redirect()->route('students.index');
+});
 
 // Route::get('hello', function () {
 //     return view('hello');
@@ -74,9 +79,9 @@ use Illuminate\Support\Facades\Route;
 
 // link to controller
 
+// controller resource
+Route::resource('students', StudentController::class);
+
 // single controller
 Route::get('/students_excel', [StudentController::class, 'excel']);
 Route::get('/students_hello', [StudentController::class, 'sayHello']);
-
-// controller resource
-Route::resource('students', StudentController::class);
