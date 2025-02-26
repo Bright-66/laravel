@@ -46,8 +46,9 @@ dd($data);
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th width="10%">ID</th>
+        <th>ID</th>
         <th>Name</th>
+        <th>mobile</th>
       </tr>
     </thead>
 
@@ -69,7 +70,8 @@ dd($data);
     <thead>
       <tr>
         <th>ID</th>
-        <th>Name</th>   
+        <th>Name</th>  
+        <th>mobile</th> 
       </tr>
     </thead>
     <tbody>
