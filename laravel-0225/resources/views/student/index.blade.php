@@ -32,8 +32,8 @@ color:red;
 <body>
   <h2>Hello index blade view</h2>
   <h1>Let`s go "welcome"!</h1>
-
 <?php
+
 // dd($data);
 ?>
     
@@ -42,7 +42,6 @@ dd($data);
 @endphp --}}
 
 <div class="container mt-3">
-      
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -59,6 +58,7 @@ dd($data);
         <td>{{$value->name}}</td>
         <td>{{$value->mobile}}</td>
       </tr>
+      <marquee behavior="" direction="">{{$value->notes}}</marquee>
       @endforeach
     </tbody>
   </table>
