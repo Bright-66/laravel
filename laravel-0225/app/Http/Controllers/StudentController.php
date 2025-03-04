@@ -1,6 +1,6 @@
 <?php
 namespace App\Http\Controllers;
-
+use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -13,8 +13,9 @@ class StudentController extends Controller
     {
         // dd(123);
         // $users = DB::table('users')->get();
-        $data = DB::table('students')->get();
-        return view('student.index', ['data' => $data]);
+        $data = DB::table('students')->select('id', 'name', 'mobile as my_mobile')->get();
+        dd($data);
+        return view('student.index');
 
         // dd($data);
         // // dd('hello student index');
